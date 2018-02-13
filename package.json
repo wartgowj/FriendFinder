@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "friend finder - match making app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wartgowj/FriendFinder.git"
+  },
+  "author": "Jaime Wartgow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wartgowj/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/wartgowj/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
