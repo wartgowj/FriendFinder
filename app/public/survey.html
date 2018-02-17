@@ -200,10 +200,10 @@
         
         if (validateForm()) {
             
-            var userData = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
-                scores: [
+            var formData = {
+                "name": $("#name").val(),
+                "photo": $("#photo").val(),
+                "scores": [
                     $("#q1").val(),
                     $("#q2").val(),
                     $("#q3").val(),
@@ -217,9 +217,18 @@
                 ]
             };
 
-            $.post("/api/friends", userData, function (data) {
+            var userData = JSON.stringify(formData);
 
-            });
+            $.ajax({
+                url:"/api/friends",
+                type: "POST",
+                data: userData,
+                contentType: "application/json; charset=utf-8"
+            })
+
+            // $.post("/api/friends", userData, function (data) {
+
+            // });
         } else {
             alert("Please fill out all fields before submitting!");
         }
